@@ -155,7 +155,9 @@ assert merged["department"].isna().sum() == 0                    # no unmatched 
 
 ## 📊 Excel Sheet Guide
 
-<!-- 📸 Add your Excel screenshot here -->
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/3f991cec-8d40-4dfb-bd67-8b8f3a64c235" />
+
 
 | Sheet | Purpose |
 |---|---|
@@ -168,7 +170,9 @@ assert merged["department"].isna().sum() == 0                    # no unmatched 
 
 ## 🐘 SQL Setup & Query Execution Steps
 
-<!-- 📸 Add your SQL / pgAdmin screenshot here -->
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/1cb3a0d0-10ba-43ab-8ecd-ccb5dcd59dd5" />
+
 
 ```bash
 psql -U <user> -d <db> -f sql/setup.sql
@@ -210,7 +214,11 @@ ORDER BY tm.team_id;
 
 ## 🐍 Python — Setup & Run
 
-<!-- 📸 Add your Jupyter screenshot here -->
+
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/f02b5477-cd1a-492e-ba82-b81f2a394f24" />
+
+
 
 ```bash
 pip install -r requirements.txt
@@ -234,6 +242,10 @@ department_summary["sla_breach_rate_percent"] = (
 ---
 
 ## ⚡ Power BI — Dashboard & Refresh Steps
+
+
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/89e325ea-0cdb-4820-b62f-3006f2fb03c1" />
+
 
 **Dashboard contents**
 
