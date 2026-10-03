@@ -25,7 +25,7 @@
     <stop offset="100%" stop-color="#061522"/>
   </linearGradient>
 
-  <!-- GLOW -->
+  <!-- BLUE GLOW -->
   <radialGradient id="glow">
     <stop offset="0%" stop-color="#168BFF" stop-opacity=".30"/>
     <stop offset="100%" stop-color="#168BFF" stop-opacity="0"/>
@@ -36,12 +36,10 @@
            width="40"
            height="40"
            patternUnits="userSpaceOnUse">
-
     <path d="M40 0H0V40"
           fill="none"
           stroke="#63C8FF"
           stroke-opacity=".045"/>
-
   </pattern>
 
   <!-- GLOW FILTER -->
@@ -64,23 +62,23 @@
 </defs>
 
 
-<!-- ===================================================== -->
+<!-- ================================================= -->
 <!-- BACKGROUND -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
 
 <rect width="1200"
       height="500"
       rx="28"
       fill="url(#bg)"/>
 
-<circle cx="120"
+<circle cx="125"
         cy="210"
         r="300"
         fill="url(#glow)"/>
 
 <circle cx="1080"
-        cy="210"
-        r="300"
+        cy="220"
+        r="310"
         fill="url(#glow)"
         opacity=".45"/>
 
@@ -90,165 +88,225 @@
       fill="url(#grid)"/>
 
 
-<!-- ===================================================== -->
-<!-- LEFT PYTHON TERMINAL -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
+<!-- LEFT POWER BI VISUAL -->
+<!-- ================================================= -->
 
-<g transform="translate(55 125)">
+<g transform="translate(55 135)">
 
-  <!-- TERMINAL SHADOW -->
-  <rect x="6"
-        y="8"
-        width="205"
-        height="265"
-        rx="20"
-        fill="#000"
-        opacity=".35"/>
+  <!-- OUTER RING -->
+  <circle cx="100"
+          cy="95"
+          r="91"
+          fill="none"
+          stroke="#299EFF"
+          stroke-opacity=".16"
+          stroke-dasharray="5 10">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 100 95"
+      to="360 100 95"
+      dur="18s"
+      repeatCount="indefinite"/>
+
+  </circle>
 
 
-  <!-- TERMINAL -->
-  <rect width="205"
-        height="265"
-        rx="20"
-        fill="#061522"
+  <!-- DASHBOARD CARD -->
+  <rect x="18"
+        y="18"
+        width="164"
+        height="155"
+        rx="17"
+        fill="#071827"
         stroke="#299EFF"
-        stroke-opacity=".35"/>
+        stroke-opacity=".38"/>
 
 
-  <!-- TERMINAL HEADER -->
-  <rect width="205"
-        height="38"
-        rx="20"
-        fill="#0B243A"/>
+  <!-- HEADER -->
+  <rect x="18"
+        y="18"
+        width="164"
+        height="29"
+        rx="17"
+        fill="#0B2942"/>
 
 
-  <circle cx="19"
-          cy="19"
+  <circle cx="34"
+          cy="32"
           r="4"
           fill="#299EFF"/>
 
-  <circle cx="32"
-          cy="19"
-          r="4"
-          fill="#4AB5FF"
-          opacity=".7"/>
 
-  <circle cx="45"
-          cy="19"
-          r="4"
-          fill="#63C8FF"
-          opacity=".5"/>
-
-
-  <text x="64"
-        y="24"
-        fill="#D8F3FF"
+  <text x="45"
+        y="36"
+        fill="#D9F4FF"
         font-family="Arial"
-        font-size="9"
-        font-weight="700">
-    PYTHON / DATAFRAME
+        font-size="8"
+        font-weight="800"
+        letter-spacing="1">
+    POWER BI
   </text>
 
 
-  <!-- CODE -->
-  <g font-family="monospace"
-     font-size="8">
+  <!-- KPI CARDS -->
+  <rect x="30"
+        y="58"
+        width="60"
+        height="29"
+        rx="7"
+        fill="#0A2236"
+        stroke="#299EFF"
+        stroke-opacity=".18"/>
 
-    <text x="18"
-          y="65"
-          fill="#63C8FF">
-      import pandas as pd
-    </text>
+  <text x="38"
+        y="70"
+        fill="#5F89A5"
+        font-family="Arial"
+        font-size="6">
+    KPI
+  </text>
 
-    <text x="18"
-          y="84"
-          fill="#7BA5BE">
-      df = pd.read_csv(...)
-    </text>
+  <text x="38"
+        y="80"
+        fill="#FFFFFF"
+        font-family="Arial"
+        font-size="9"
+        font-weight="800">
+    92%
+  </text>
 
-    <text x="18"
-          y="103"
-          fill="#299EFF">
-      df.drop_duplicates()
-    </text>
 
-    <text x="18"
-          y="122"
-          fill="#7BA5BE">
-      df.merge(lookup)
-    </text>
+  <rect x="100"
+        y="58"
+        width="60"
+        height="29"
+        rx="7"
+        fill="#0A2236"
+        stroke="#299EFF"
+        stroke-opacity=".18"/>
 
-    <text x="18"
-          y="141"
-          fill="#63C8FF">
-      df["flag"] = ...
-    </text>
+  <text x="108"
+        y="70"
+        fill="#5F89A5"
+        font-family="Arial"
+        font-size="6">
+    SALES
+  </text>
 
-    <text x="18"
-          y="160"
-          fill="#7BA5BE">
-      df.groupby("department")
-    </text>
+  <text x="108"
+        y="80"
+        fill="#63C8FF"
+        font-family="Arial"
+        font-size="9"
+        font-weight="800">
+    4.2K
+  </text>
+
+
+  <!-- CHART -->
+  <rect x="30"
+        y="98"
+        width="130"
+        height="55"
+        rx="8"
+        fill="#06131F"/>
+
+
+  <!-- CHART GRID -->
+  <g stroke="#63C8FF"
+     stroke-opacity=".08">
+
+    <path d="M38 112H152"/>
+    <path d="M38 126H152"/>
+    <path d="M38 140H152"/>
 
   </g>
 
 
-  <!-- CURSOR -->
-  <rect x="18"
-        y="178"
-        width="6"
-        height="12"
-        fill="#63C8FF">
+  <!-- BAR CHART -->
+  <rect x="43"
+        y="128"
+        width="12"
+        height="17"
+        rx="2"
+        fill="#299EFF">
 
-    <animate attributeName="opacity"
-             values="1;0;1"
-             dur="1s"
+    <animate attributeName="height"
+             values="17;25;17"
+             dur="2s"
              repeatCount="indefinite"/>
 
   </rect>
 
+  <rect x="64"
+        y="119"
+        width="12"
+        height="26"
+        rx="2"
+        fill="#4AB5FF">
 
-  <!-- MINI DATAFRAME -->
-  <rect x="18"
-        y="205"
-        width="169"
-        height="43"
-        rx="8"
-        fill="#091E30"
-        stroke="#299EFF"
-        stroke-opacity=".18"/>
+    <animate attributeName="height"
+             values="26;17;26"
+             dur="2.2s"
+             repeatCount="indefinite"/>
+
+  </rect>
+
+  <rect x="85"
+        y="124"
+        width="12"
+        height="21"
+        rx="2"
+        fill="#63C8FF">
+
+    <animate attributeName="height"
+             values="21;30;21"
+             dur="2.4s"
+             repeatCount="indefinite"/>
+
+  </rect>
+
+  <rect x="106"
+        y="114"
+        width="12"
+        height="31"
+        rx="2"
+        fill="#299EFF"/>
+
+  <rect x="127"
+        y="121"
+        width="12"
+        height="24"
+        rx="2"
+        fill="#58C2FF"/>
 
 
-  <g stroke="#63C8FF"
-     stroke-opacity=".10">
-
-    <path d="M18 219H187"/>
-    <path d="M18 233H187"/>
-    <path d="M60 205V248"/>
-    <path d="M112 205V248"/>
-
-  </g>
-
-
-  <circle cx="177"
-          cy="226"
-          r="3"
-          fill="#299EFF"
+  <!-- MOVING DOT -->
+  <circle cx="100"
+          cy="5"
+          r="4"
+          fill="#63C8FF"
           filter="url(#blueGlow)">
 
-    <animate attributeName="opacity"
-             values="1;.2;1"
-             dur="1.6s"
-             repeatCount="indefinite"/>
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 100 95"
+      to="360 100 95"
+      dur="8s"
+      repeatCount="indefinite"/>
 
   </circle>
 
 </g>
 
 
-<!-- ===================================================== -->
+<!-- ================================================= -->
 <!-- MAIN TITLE -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
 
 <g transform="translate(285 48)">
 
@@ -259,7 +317,7 @@
         font-size="11"
         font-weight="700"
         letter-spacing="2.5">
-    DATA ANALYSIS • PYTHON WORKFLOW
+    DATA ANALYSIS • POWER BI WORKFLOW
   </text>
 
 
@@ -277,19 +335,19 @@
         font-family="Arial"
         font-size="43"
         font-weight="800">
-    TASK 3 : PYTHON
+    TASK 4 : POWER BI
   </text>
 
 </g>
 
 
-<!-- ===================================================== -->
-<!-- CENTER PYTHON DATA PIPELINE -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
+<!-- CENTER POWER BI WORKSPACE -->
+<!-- ================================================= -->
 
 <g transform="translate(285 135)">
 
-  <!-- MAIN CARD -->
+  <!-- MAIN WORKSPACE -->
   <rect width="475"
         height="275"
         rx="22"
@@ -325,7 +383,7 @@
         font-size="10"
         font-weight="800"
         letter-spacing="1.2">
-    PYTHON DATA PIPELINE
+    POWER BI ANALYTICS WORKSPACE
   </text>
 
 
@@ -335,17 +393,17 @@
         fill="#527993"
         font-family="Arial"
         font-size="7">
-    ETL → ANALYSIS → EXPORT
+    MODEL → DAX → REPORT
   </text>
 
 
   <!-- ================================================= -->
-  <!-- STEP 01 : LOAD & CLEAN -->
+  <!-- POWER QUERY -->
   <!-- ================================================= -->
 
   <g transform="translate(18 58)">
 
-    <rect width="205"
+    <rect width="135"
           height="82"
           rx="14"
           fill="#081E31"
@@ -353,7 +411,7 @@
           stroke-opacity=".22"/>
 
 
-    <circle cx="25"
+    <circle cx="26"
             cy="25"
             r="16"
             fill="#092B47"
@@ -361,7 +419,7 @@
             stroke-opacity=".70"/>
 
 
-    <text x="25"
+    <text x="26"
           y="29"
           text-anchor="middle"
           fill="#63C8FF"
@@ -378,7 +436,7 @@
           font-family="Arial"
           font-size="9"
           font-weight="800">
-      LOAD &amp; CLEAN
+      POWER QUERY
     </text>
 
 
@@ -387,7 +445,7 @@
           fill="#6489A2"
           font-family="Arial"
           font-size="7">
-      CSV • Remove Duplicates
+      Load • Clean
     </text>
 
 
@@ -396,19 +454,18 @@
           fill="#299EFF"
           font-family="Arial"
           font-size="7">
-      Missing / Type Cleanup
+      Transform Data
     </text>
 
 
-    <!-- cleaning animation -->
-    <circle cx="177"
+    <circle cx="113"
             cy="65"
             r="3"
             fill="#63C8FF">
 
-      <animate attributeName="cx"
-               values="155;180;155"
-               dur="2s"
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="1.7s"
                repeatCount="indefinite"/>
 
     </circle>
@@ -417,12 +474,12 @@
 
 
   <!-- ================================================= -->
-  <!-- STEP 02 : MERGE & DERIVE -->
+  <!-- DATA MODEL -->
   <!-- ================================================= -->
 
-  <g transform="translate(252 58)">
+  <g transform="translate(170 58)">
 
-    <rect width="205"
+    <rect width="135"
           height="82"
           rx="14"
           fill="#081E31"
@@ -430,7 +487,7 @@
           stroke-opacity=".22"/>
 
 
-    <circle cx="25"
+    <circle cx="26"
             cy="25"
             r="16"
             fill="#092B47"
@@ -438,7 +495,7 @@
             stroke-opacity=".70"/>
 
 
-    <text x="25"
+    <text x="26"
           y="29"
           text-anchor="middle"
           fill="#63C8FF"
@@ -455,7 +512,7 @@
           font-family="Arial"
           font-size="9"
           font-weight="800">
-      MERGE &amp; DERIVE
+      DATA MODEL
     </text>
 
 
@@ -464,7 +521,7 @@
           fill="#6489A2"
           font-family="Arial"
           font-size="7">
-      Merge Lookup Data
+      Tables • Relations
     </text>
 
 
@@ -473,11 +530,11 @@
           fill="#299EFF"
           font-family="Arial"
           font-size="7">
-      Derived Field
+      Star Schema
     </text>
 
 
-    <circle cx="177"
+    <circle cx="113"
             cy="65"
             r="3"
             fill="#299EFF">
@@ -492,10 +549,87 @@
   </g>
 
 
-  <!-- CONNECTOR -->
-  <path d="M223 99H252"
+  <!-- ================================================= -->
+  <!-- DAX -->
+  <!-- ================================================= -->
+
+  <g transform="translate(322 58)">
+
+    <rect width="135"
+          height="82"
+          rx="14"
+          fill="#081E31"
+          stroke="#299EFF"
+          stroke-opacity=".22"/>
+
+
+    <circle cx="26"
+            cy="25"
+            r="16"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".70"/>
+
+
+    <text x="26"
+          y="29"
+          text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      03
+    </text>
+
+
+    <text x="49"
+          y="23"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      DAX MEASURES
+    </text>
+
+
+    <text x="49"
+          y="40"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      KPI • CALCULATE
+    </text>
+
+
+    <text x="49"
+          y="55"
+          fill="#299EFF"
+          font-family="Arial"
+          font-size="7">
+      Filter Context
+    </text>
+
+
+    <circle cx="113"
+            cy="65"
+            r="3"
+            fill="#63C8FF">
+
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="1.6s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+  </g>
+
+
+  <!-- CONNECTOR LINE -->
+  <path d="M153 99H170M305 99H322"
+        fill="none"
         stroke="#299EFF"
-        stroke-width="1.5"
+        stroke-width="1.4"
         stroke-dasharray="4 5">
 
     <animate attributeName="stroke-dashoffset"
@@ -508,7 +642,7 @@
 
 
   <!-- ================================================= -->
-  <!-- BOTTOM ANALYSIS -->
+  <!-- REPORT PAGE -->
   <!-- ================================================= -->
 
   <g transform="translate(18 158)">
@@ -521,179 +655,159 @@
           stroke-opacity=".20"/>
 
 
-    <!-- LEFT ANALYSIS -->
     <text x="18"
-          y="22"
+          y="21"
           fill="#FFFFFF"
           font-family="Arial"
           font-size="8"
           font-weight="800">
-      DEPARTMENT ANALYSIS
+      REPORT PAGE
     </text>
 
 
-    <!-- BAR 1 -->
-    <rect x="18"
-          y="37"
-          width="90"
-          height="9"
-          rx="4"
-          fill="#123A57"/>
-
-    <rect x="18"
-          y="37"
-          width="62"
-          height="9"
-          rx="4"
-          fill="#299EFF">
-
-      <animate attributeName="width"
-               values="62;82;62"
-               dur="2.5s"
-               repeatCount="indefinite"/>
-
-    </rect>
-
-
-    <text x="116"
-          y="45"
-          fill="#6489A2"
+    <text x="420"
+          y="21"
+          text-anchor="end"
+          fill="#4E7897"
           font-family="Arial"
           font-size="7">
-      Support
+      DASHBOARD OUTPUT
     </text>
 
 
-    <!-- BAR 2 -->
+    <!-- KPI 1 -->
     <rect x="18"
-          y="56"
-          width="90"
-          height="9"
-          rx="4"
-          fill="#123A57"/>
+          y="34"
+          width="72"
+          height="47"
+          rx="8"
+          fill="#0A2134"/>
 
-    <rect x="18"
-          y="56"
-          width="75"
-          height="9"
-          rx="4"
-          fill="#4AB5FF">
-
-      <animate attributeName="width"
-               values="75;58;75"
-               dur="2.7s"
-               repeatCount="indefinite"/>
-
-    </rect>
-
-
-    <text x="116"
-          y="64"
+    <text x="28"
+          y="48"
           fill="#6489A2"
           font-family="Arial"
-          font-size="7">
-      Sales
+          font-size="6">
+      TOTAL
+    </text>
+
+    <text x="28"
+          y="67"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="14"
+          font-weight="800">
+      4.2K
     </text>
 
 
-    <!-- BAR 3 -->
-    <rect x="18"
-          y="75"
-          width="90"
-          height="9"
-          rx="4"
-          fill="#123A57"/>
+    <!-- KPI 2 -->
+    <rect x="99"
+          y="34"
+          width="72"
+          height="47"
+          rx="8"
+          fill="#0A2134"/>
 
-    <rect x="18"
-          y="75"
-          width="48"
-          height="9"
-          rx="4"
-          fill="#63C8FF">
-
-      <animate attributeName="width"
-               values="48;72;48"
-               dur="2.3s"
-               repeatCount="indefinite"/>
-
-    </rect>
-
-
-    <text x="116"
-          y="83"
+    <text x="109"
+          y="48"
           fill="#6489A2"
           font-family="Arial"
-          font-size="7">
-      Operations
+          font-size="6">
+      KPI
+    </text>
+
+    <text x="109"
+          y="67"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="14"
+          font-weight="800">
+      92%
     </text>
 
 
-    <!-- EXPORT CARDS -->
-    <g transform="translate(245 20)">
-
-      <rect width="175"
-            height="63"
-            rx="11"
-            fill="#0A2134"
-            stroke="#299EFF"
-            stroke-opacity=".20"/>
+    <!-- MINI CHART -->
+    <rect x="180"
+          y="34"
+          width="115"
+          height="47"
+          rx="8"
+          fill="#0A2134"/>
 
 
-      <text x="14"
-            y="18"
-            fill="#63C8FF"
-            font-family="Arial"
-            font-size="7"
-            font-weight="700">
-        OUTPUT FILES
-      </text>
+    <path d="M190 69
+             L207 60
+             L224 64
+             L241 49
+             L258 55
+             L278 42"
+          fill="none"
+          stroke="#299EFF"
+          stroke-width="2">
+
+      <animate attributeName="stroke-dasharray"
+               values="0,150;150,0;0,150"
+               dur="3s"
+               repeatCount="indefinite"/>
+
+    </path>
 
 
-      <text x="14"
-            y="36"
-            fill="#FFFFFF"
-            font-family="monospace"
-            font-size="8">
-        analysis.csv
-      </text>
+    <!-- REPORT SCREEN -->
+    <rect x="304"
+          y="34"
+          width="117"
+          height="47"
+          rx="8"
+          fill="#0A2134"
+          stroke="#299EFF"
+          stroke-opacity=".18"/>
 
 
-      <text x="14"
-            y="51"
-            fill="#7897AB"
-            font-family="monospace"
-            font-size="8">
-        summary.xlsx
-      </text>
+    <rect x="315"
+          y="43"
+          width="35"
+          height="8"
+          rx="2"
+          fill="#123D5B"/>
+
+    <rect x="355"
+          y="43"
+          width="55"
+          height="8"
+          rx="2"
+          fill="#123D5B"/>
 
 
-      <!-- EXPORT ARROW -->
-      <path d="M145 29
-               L158 29
-               M153 24
-               L158 29
-               L153 34"
-            fill="none"
-            stroke="#63C8FF"
-            stroke-width="1.5">
+    <rect x="315"
+          y="57"
+          width="95"
+          height="14"
+          rx="3"
+          fill="#09283F"/>
 
-        <animate attributeName="opacity"
-                 values=".3;1;.3"
-                 dur="1.5s"
-                 repeatCount="indefinite"/>
 
-      </path>
+    <circle cx="322"
+            cy="64"
+            r="3"
+            fill="#63C8FF">
 
-    </g>
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="1.4s"
+               repeatCount="indefinite"/>
+
+    </circle>
 
   </g>
 
 </g>
 
 
-<!-- ===================================================== -->
-<!-- RIGHT : PYTHON WORKFLOW -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
+<!-- RIGHT POWER BI PIPELINE -->
+<!-- ================================================= -->
 
 <g transform="translate(790 42)">
 
@@ -703,7 +817,7 @@
         width="350"
         height="350"
         rx="25"
-        fill="#000000"
+        fill="#000"
         opacity=".42"/>
 
 
@@ -727,7 +841,7 @@
         stroke-opacity=".07"/>
 
 
-  <!-- HEADER DOT -->
+  <!-- HEADER -->
   <circle cx="22"
           cy="31"
           r="5"
@@ -749,7 +863,7 @@
         font-size="12"
         font-weight="800"
         letter-spacing="1.5">
-    PYTHON PIPELINE
+    POWER BI PIPELINE
   </text>
 
 
@@ -760,11 +874,10 @@
         font-family="Arial"
         font-size="7"
         letter-spacing="1">
-    01 → 03
+    01 → 04
   </text>
 
 
-  <!-- DIVIDER -->
   <rect x="20"
         y="54"
         width="310"
@@ -773,65 +886,255 @@
         opacity=".10"/>
 
 
-  <!-- ================================================= -->
   <!-- STEP 01 -->
-  <!-- ================================================= -->
-
-  <g transform="translate(20 70)">
+  <g transform="translate(20 68)">
 
     <rect width="310"
-          height="54"
+          height="50"
           rx="13"
           fill="#071C30"
           stroke="#299EFF"
           stroke-opacity=".24"/>
 
 
-    <circle cx="26"
-            cy="27"
-            r="17"
+    <circle cx="25"
+            cy="25"
+            r="16"
             fill="#092B47"
             stroke="#299EFF"
             stroke-opacity=".75"/>
 
 
-    <text x="26"
-          y="31"
+    <text x="25"
+          y="29"
           text-anchor="middle"
           fill="#63C8FF"
           font-family="Arial"
-          font-size="10"
+          font-size="9"
           font-weight="800">
       01
     </text>
 
 
-    <text x="49"
-          y="22"
+    <text x="48"
+          y="21"
           fill="#FFFFFF"
           font-family="Arial"
-          font-size="10"
+          font-size="9"
           font-weight="800">
-      LOAD &amp; CLEAN
+      POWER QUERY
     </text>
 
 
-    <text x="49"
-          y="37"
+    <text x="48"
+          y="35"
           fill="#6489A2"
           font-family="Arial"
           font-size="7">
-      Read • Clean • Prepare
+      Clean &amp; Transform
     </text>
 
 
     <circle cx="287"
-            cy="27"
+            cy="25"
             r="4"
-            fill="#299EFF">
+            fill="#299EFF"/>
+
+  </g>
+
+
+  <!-- connector -->
+  <path d="M175 118V130"
+        stroke="#299EFF"
+        stroke-width="1.4"
+        stroke-dasharray="4 5"/>
+
+
+  <!-- STEP 02 -->
+  <g transform="translate(20 130)">
+
+    <rect width="310"
+          height="50"
+          rx="13"
+          fill="#071C30"
+          stroke="#299EFF"
+          stroke-opacity=".24"/>
+
+
+    <circle cx="25"
+            cy="25"
+            r="16"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".75"/>
+
+
+    <text x="25"
+          y="29"
+          text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      02
+    </text>
+
+
+    <text x="48"
+          y="21"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      DATA MODEL
+    </text>
+
+
+    <text x="48"
+          y="35"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Tables &amp; Relationships
+    </text>
+
+
+    <circle cx="287"
+            cy="25"
+            r="4"
+            fill="#299EFF"/>
+
+  </g>
+
+
+  <!-- connector -->
+  <path d="M175 180V192"
+        stroke="#299EFF"
+        stroke-width="1.4"
+        stroke-dasharray="4 5"/>
+
+
+  <!-- STEP 03 -->
+  <g transform="translate(20 192)">
+
+    <rect width="310"
+          height="50"
+          rx="13"
+          fill="#071C30"
+          stroke="#299EFF"
+          stroke-opacity=".24"/>
+
+
+    <circle cx="25"
+            cy="25"
+            r="16"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".75"/>
+
+
+    <text x="25"
+          y="29"
+          text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      03
+    </text>
+
+
+    <text x="48"
+          y="21"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      DAX MEASURES
+    </text>
+
+
+    <text x="48"
+          y="35"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      CALCULATE • KPI • Context
+    </text>
+
+
+    <circle cx="287"
+            cy="25"
+            r="4"
+            fill="#299EFF"/>
+
+  </g>
+
+
+  <!-- connector -->
+  <path d="M175 242V254"
+        stroke="#299EFF"
+        stroke-width="1.4"
+        stroke-dasharray="4 5"/>
+
+
+  <!-- STEP 04 -->
+  <g transform="translate(20 254)">
+
+    <rect width="310"
+          height="50"
+          rx="13"
+          fill="#071C30"
+          stroke="#299EFF"
+          stroke-opacity=".24"/>
+
+
+    <circle cx="25"
+            cy="25"
+            r="16"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".75"/>
+
+
+    <text x="25"
+          y="29"
+          text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      04
+    </text>
+
+
+    <text x="48"
+          y="21"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="9"
+          font-weight="800">
+      REPORT PAGE
+    </text>
+
+
+    <text x="48"
+          y="35"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Visuals • Screenshot
+    </text>
+
+
+    <circle cx="287"
+            cy="25"
+            r="4"
+            fill="#63C8FF"
+            filter="url(#blueGlow)">
 
       <animate attributeName="opacity"
-               values="1;.25;1"
+               values="1;.2;1"
                dur="1.5s"
                repeatCount="indefinite"/>
 
@@ -840,227 +1143,22 @@
   </g>
 
 
-  <!-- CONNECTOR -->
-  <path d="M175 124V140"
-        fill="none"
-        stroke="#299EFF"
-        stroke-width="1.5"
-        stroke-dasharray="4 5">
-
-    <animate attributeName="stroke-dashoffset"
-             from="0"
-             to="-18"
-             dur="1s"
-             repeatCount="indefinite"/>
-
-  </path>
-
-
-  <!-- ================================================= -->
-  <!-- STEP 02 -->
-  <!-- ================================================= -->
-
-  <g transform="translate(20 140)">
-
-    <rect width="310"
-          height="54"
-          rx="13"
-          fill="#071C30"
-          stroke="#299EFF"
-          stroke-opacity=".24"/>
-
-
-    <circle cx="26"
-            cy="27"
-            r="17"
-            fill="#092B47"
-            stroke="#299EFF"
-            stroke-opacity=".75"/>
-
-
-    <text x="26"
-          y="31"
-          text-anchor="middle"
-          fill="#63C8FF"
-          font-family="Arial"
-          font-size="10"
-          font-weight="800">
-      02
-    </text>
-
-
-    <text x="49"
-          y="22"
-          fill="#FFFFFF"
-          font-family="Arial"
-          font-size="10"
-          font-weight="800">
-      DERIVED FIELD
-    </text>
-
-
-    <text x="49"
-          y="37"
-          fill="#6489A2"
-          font-family="Arial"
-          font-size="7">
-      Merge • Transform • Analyze
-    </text>
-
-
-    <circle cx="287"
-            cy="27"
-            r="4"
-            fill="#299EFF">
-
-      <animate attributeName="opacity"
-               values=".25;1;.25"
-               dur="1.8s"
-               repeatCount="indefinite"/>
-
-    </circle>
-
-  </g>
-
-
-  <!-- CONNECTOR -->
-  <path d="M175 194V210"
-        fill="none"
-        stroke="#299EFF"
-        stroke-width="1.5"
-        stroke-dasharray="4 5">
-
-    <animate attributeName="stroke-dashoffset"
-             from="0"
-             to="-18"
-             dur="1s"
-             repeatCount="indefinite"/>
-
-  </path>
-
-
-  <!-- ================================================= -->
-  <!-- STEP 03 -->
-  <!-- ================================================= -->
-
-  <g transform="translate(20 210)">
-
-    <rect width="310"
-          height="54"
-          rx="13"
-          fill="#071C30"
-          stroke="#299EFF"
-          stroke-opacity=".24"/>
-
-
-    <circle cx="26"
-            cy="27"
-            r="17"
-            fill="#092B47"
-            stroke="#299EFF"
-            stroke-opacity=".75"/>
-
-
-    <text x="26"
-          y="31"
-          text-anchor="middle"
-          fill="#63C8FF"
-          font-family="Arial"
-          font-size="10"
-          font-weight="800">
-      03
-    </text>
-
-
-    <text x="49"
-          y="22"
-          fill="#FFFFFF"
-          font-family="Arial"
-          font-size="10"
-          font-weight="800">
-      CHART &amp; EXPORTS
-    </text>
-
-
-    <text x="49"
-          y="37"
-          fill="#6489A2"
-          font-family="Arial"
-          font-size="7">
-      Visualize • Save • Export
-    </text>
-
-
-    <circle cx="287"
-            cy="27"
-            r="4"
-            fill="#299EFF">
-
-      <animate attributeName="opacity"
-               values="1;.25;1"
-               dur="1.6s"
-               repeatCount="indefinite"/>
-
-    </circle>
-
-  </g>
-
-
-  <!-- FOOT LABEL -->
+  <!-- PIPELINE LABEL -->
   <text x="20"
-        y="287"
+        y="326"
         fill="#4E7897"
         font-family="Arial"
         font-size="7"
         letter-spacing="1">
-    LOAD → CLEAN → MERGE → ANALYZE → EXPORT
+    QUERY → MODEL → MEASURE → REPORT
   </text>
-
-
-  <!-- PROGRESS -->
-  <rect x="20"
-        y="307"
-        width="310"
-        height="2"
-        rx="1"
-        fill="#12354D"/>
-
-
-  <rect x="20"
-        y="307"
-        width="65"
-        height="2"
-        rx="1"
-        fill="#299EFF">
-
-    <animate attributeName="x"
-             values="20;265;20"
-             dur="4s"
-             repeatCount="indefinite"/>
-
-  </rect>
-
-
-  <!-- LIVE DOT -->
-  <circle cx="320"
-          cy="325"
-          r="3"
-          fill="#63C8FF"
-          filter="url(#blueGlow)">
-
-    <animate attributeName="opacity"
-             values="1;.2;1"
-             dur="1.4s"
-             repeatCount="indefinite"/>
-
-  </circle>
 
 </g>
 
 
-<!-- ===================================================== -->
+<!-- ================================================= -->
 <!-- FOOTER -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
 
 <g transform="translate(45 450)">
 
@@ -1085,7 +1183,7 @@
         font-size="8"
         font-weight="800"
         letter-spacing="1.2">
-    PYTHON TASK 3
+    POWER BI TASK 4
   </text>
 
 
@@ -1094,7 +1192,7 @@
         fill="#AFC5D4"
         font-family="Arial"
         font-size="8">
-    Load, Clean &amp; Merge • Derived Field &amp; Department Analysis • Chart &amp; Exports
+    Power Query &amp; Data Model • DAX Measures • Report Page &amp; Screenshot
   </text>
 
 
@@ -1114,9 +1212,9 @@
 </g>
 
 
-<!-- ===================================================== -->
+<!-- ================================================= -->
 <!-- CORNER ACCENTS -->
-<!-- ===================================================== -->
+<!-- ================================================= -->
 
 <path d="M0 455
          V475
