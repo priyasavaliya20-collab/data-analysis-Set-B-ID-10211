@@ -264,7 +264,7 @@ Home → Transform Data → Data Source Settings
 → Close & Apply → Refresh
 ```
 
-<!-- 📸 Add your Power BI dashboard screenshot here -->
+
 
 ---
 
@@ -272,59 +272,26 @@ Home → Transform Data → Data Source Settings
 
 **Overall:** 12 tickets · 5 SLA breaches · **41.67% breach rate** · avg resolution **23.83 hrs** · avg satisfaction **3.58 / 5**
 
-**Average resolution time by department (S2a)**
-
-| Department | Avg Resolution Hours | Tickets | Breaches | Breach Rate |
+| Department | Team | Avg Resolution Hrs | Breaches | Breach Rate |
 |---|---|---|---|---|
-| Technical | 28.33 | 6 | 3 | 50.00% |
-| Service | 19.33 | 6 | 2 | 33.33% |
+| Technical | AppSupport | 28.67 | 2 / 3 | 66.67% |
+| Technical | DeviceHelp | 28.00 | 1 / 3 | 33.33% |
+| Service | BillingHelp | 26.67 | 2 / 3 | 66.67% |
+| Service | AccountCare | 12.00 | 0 / 3 | 0.00% |
 
-**Teams breaching SLA — average above 24 hrs (S2b)**
-
-| Team | Avg Resolution Hours |
-|---|---|
-| AppSupport | 28.67 |
-| DeviceHelp | 28.00 |
-| BillingHelp | 26.67 |
-
-*AccountCare (avg 12.00 hrs, 0 breaches) is the only team within SLA.*
-
-**Top two channels by breach count (S2c)**
-
-| Channel | Breach Count |
-|---|---|
-| Chat | 3 |
-| Phone | 2 |
-
-*Email had 0 breaches.*
-
-**Team breach rate**
-
-| Team | Tickets | Breaches | Breach Rate |
-|---|---|---|---|
-| AppSupport | 3 | 2 | 66.67% |
-| BillingHelp | 3 | 2 | 66.67% |
-| DeviceHelp | 3 | 1 | 33.33% |
-| AccountCare | 3 | 0 | 0.00% |
-
-**Monthly average resolution hours**
-
-| Month | Avg Resolution Hours |
-|---|---|
-| Jan | 24.00 |
-| Feb | 24.00 |
-| Mar | 23.50 |
-
-**Data integrity (S3):** all 4 teams matched 3 tickets each, with `unmatched_team_flag = 0` for every team — no orphan `team_id`.
+- **By department:** Technical 28.33 hrs vs Service 19.33 hrs
+- **Breaches by channel:** Chat 3 · Phone 2 · Email 0
+- **Monthly avg resolution:** Jan 24.00 · Feb 24.00 · Mar 23.50
+- **Integrity check (S3):** all 4 teams matched 3 tickets each, no orphan `team_id`
 
 **Findings:**
-1. Technical resolves tickets ~9 hours slower than Service (28.33 vs 19.33 hrs) and breaches more often (50% vs 33%).
-2. Chat and Phone account for all 5 breaches; Email has none.
-3. AppSupport and BillingHelp are tied for the highest breach rate (66.67%).
-4. Breached tickets average **2.60** satisfaction vs **4.29** for on-time tickets — slow resolution clearly hurts customer experience.
-5. Monthly average stays flat around 24 hrs, i.e. the team sits right on the SLA line.
+1. Technical is ~9 hrs slower than Service and breaches more often (50% vs 33%).
+2. Chat and Phone cause all 5 breaches; Email has none.
+3. Breached tickets average **2.60** satisfaction vs **4.29** for on-time tickets.
 
-**Recommendation:** Prioritise process review for **AppSupport** and **DeviceHelp** (Technical) and for the **Chat** and **Phone** channels, and use AccountCare's workflow as the benchmark.
+**Recommendation:** Review **AppSupport**, **DeviceHelp** and the **Chat/Phone** channels first; use AccountCare's workflow as the benchmark.
+
+---
 
 ---
 
@@ -374,4 +341,4 @@ Feedback and suggestions are welcome.
 
 ⭐ Star the repo if this was useful.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:14B8A6,100:0B1F3A&height=120&section=footer" width="100%"/>
+
