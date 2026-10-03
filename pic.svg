@@ -3,760 +3,870 @@
      height="500"
      viewBox="0 0 1200 500">
 
-  <defs>
+<defs>
 
-    <!-- BACKGROUND -->
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#020914"/>
-      <stop offset="48%" stop-color="#06203A"/>
-      <stop offset="100%" stop-color="#01050B"/>
-    </linearGradient>
-
-    <radialGradient id="blueGlow">
-      <stop offset="0%" stop-color="#168BFF" stop-opacity=".30"/>
-      <stop offset="100%" stop-color="#168BFF" stop-opacity="0"/>
-    </radialGradient>
-
-    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="55%" stop-color="#55BFFF"/>
-      <stop offset="100%" stop-color="#BDEBFF"/>
-    </linearGradient>
-
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#123552" stop-opacity=".95"/>
-      <stop offset="100%" stop-color="#061421" stop-opacity=".96"/>
-    </linearGradient>
-
-    <pattern id="grid"
-             width="40"
-             height="40"
-             patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40"
-            fill="none"
-            stroke="#69CFFF"
-            stroke-opacity=".045"/>
-    </pattern>
-
-    <filter id="glow"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%">
-
-      <feGaussianBlur stdDeviation="5"
-                      result="blur"/>
-
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-
-    </filter>
-
-  </defs>
-
-
-  <!-- ========================= -->
   <!-- BACKGROUND -->
-  <!-- ========================= -->
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#020914"/>
+    <stop offset="50%" stop-color="#06233D"/>
+    <stop offset="100%" stop-color="#01050B"/>
+  </linearGradient>
 
-  <rect width="1200"
-        height="500"
-        rx="28"
-        fill="url(#bg)"/>
+  <!-- TITLE -->
+  <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="55%" stop-color="#58C2FF"/>
+    <stop offset="100%" stop-color="#C8F0FF"/>
+  </linearGradient>
 
-  <circle cx="140"
-          cy="190"
-          r="340"
-          fill="url(#blueGlow)"/>
+  <!-- PANEL -->
+  <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#103552"/>
+    <stop offset="100%" stop-color="#061522"/>
+  </linearGradient>
 
-  <circle cx="1050"
-          cy="230"
-          r="340"
-          fill="url(#blueGlow)"
-          opacity=".55"/>
+  <!-- GLOW -->
+  <radialGradient id="glow">
+    <stop offset="0%" stop-color="#168BFF" stop-opacity=".30"/>
+    <stop offset="100%" stop-color="#168BFF" stop-opacity="0"/>
+  </radialGradient>
 
-  <rect width="1200"
-        height="500"
-        rx="28"
-        fill="url(#grid)"/>
+  <!-- GRID -->
+  <pattern id="grid"
+           width="40"
+           height="40"
+           patternUnits="userSpaceOnUse">
 
-
-  <!-- ========================= -->
-  <!-- LEFT ANALYTICS ORBIT -->
-  <!-- ========================= -->
-
-  <g transform="translate(140 225)">
-
-    <circle r="112"
-            fill="#168BFF"
-            opacity=".035"/>
-
-    <circle r="94"
-            fill="none"
-            stroke="#299EFF"
-            stroke-opacity=".22"
-            stroke-width="1"
-            stroke-dasharray="5 9">
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0"
-        to="360"
-        dur="18s"
-        repeatCount="indefinite"/>
-
-    </circle>
-
-
-    <circle r="72"
-            fill="none"
-            stroke="#63C8FF"
-            stroke-opacity=".18"
-            stroke-dasharray="2 12">
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="360"
-        to="0"
-        dur="12s"
-        repeatCount="indefinite"/>
-
-    </circle>
-
-
-    <!-- moving nodes -->
-
-    <g>
-
-      <circle cy="-94"
-              r="5"
-              fill="#63C8FF"
-              filter="url(#glow)"/>
-
-      <circle cx="94"
-              r="4"
-              fill="#299EFF"/>
-
-      <circle cx="-94"
-              r="4"
-              fill="#299EFF"/>
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0"
-        to="360"
-        dur="9s"
-        repeatCount="indefinite"/>
-
-    </g>
-
-
-    <!-- core -->
-
-    <circle r="57"
-            fill="#071827"
-            stroke="#299EFF"
-            stroke-opacity=".45"/>
-
-    <circle r="33"
-            fill="#0A2339"
-            stroke="#63C8FF"
-            stroke-opacity=".35"/>
-
-
-    <!-- sweep -->
-
-    <path d="M0 0
-             L0-54
-             A54 54 0 0 1 39-38
-             Z"
-          fill="#299EFF"
-          opacity=".18">
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0"
-        to="360"
-        dur="4s"
-        repeatCount="indefinite"/>
-
-    </path>
-
-
-    <!-- customer icon -->
-
-    <circle cy="-9"
-            r="8"
-            fill="#FFFFFF"/>
-
-    <path d="M-17 20
-             C-17 8 -9 2 0 2
-             S17 8 17 20"
+    <path d="M40 0H0V40"
           fill="none"
           stroke="#63C8FF"
-          stroke-width="6"
-          stroke-linecap="round"/>
+          stroke-opacity=".045"/>
+
+  </pattern>
+
+  <!-- GLOW FILTER -->
+  <filter id="blueGlow"
+          x="-100%"
+          y="-100%"
+          width="300%"
+          height="300%">
+
+    <feGaussianBlur stdDeviation="4"
+                    result="blur"/>
+
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+
+  </filter>
+
+</defs>
 
 
-    <!-- pulse -->
+<!-- ===================================================== -->
+<!-- BACKGROUND -->
+<!-- ===================================================== -->
 
-    <circle r="32"
-            fill="none"
-            stroke="#299EFF">
+<rect width="1200"
+      height="500"
+      rx="28"
+      fill="url(#bg)"/>
 
-      <animate attributeName="r"
-               values="32;70;32"
-               dur="3s"
-               repeatCount="indefinite"/>
+<circle cx="120"
+        cy="210"
+        r="300"
+        fill="url(#glow)"/>
 
-      <animate attributeName="opacity"
-               values=".7;0;.7"
-               dur="3s"
-               repeatCount="indefinite"/>
+<circle cx="1080"
+        cy="200"
+        r="300"
+        fill="url(#glow)"
+        opacity=".45"/>
 
-    </circle>
+<rect width="1200"
+      height="500"
+      rx="28"
+      fill="url(#grid)"/>
+
+
+<!-- ===================================================== -->
+<!-- LEFT ZONE : EXCEL ICON -->
+<!-- x = 55 → 245 -->
+<!-- ===================================================== -->
+
+<g transform="translate(150 230)">
+
+  <!-- OUTER RING -->
+  <circle r="91"
+          fill="none"
+          stroke="#299EFF"
+          stroke-opacity=".18"
+          stroke-dasharray="5 10">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0"
+      to="360"
+      dur="18s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- INNER RING -->
+  <circle r="70"
+          fill="none"
+          stroke="#63C8FF"
+          stroke-opacity=".13"
+          stroke-dasharray="2 12">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360"
+      to="0"
+      dur="12s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+
+  <!-- SPREADSHEET -->
+  <rect x="-55"
+        y="-47"
+        width="110"
+        height="94"
+        rx="11"
+        fill="#071827"
+        stroke="#299EFF"
+        stroke-opacity=".45"/>
+
+
+  <!-- GRID -->
+  <g stroke="#63C8FF"
+     stroke-opacity=".13">
+
+    <path d="M-36 -47V47"/>
+    <path d="M-8 -47V47"/>
+    <path d="M20 -47V47"/>
+    <path d="M-55 -21H55"/>
+    <path d="M-55 4H55"/>
+    <path d="M-55 27H55"/>
 
   </g>
 
 
-  <!-- ========================= -->
-  <!-- MAIN TITLE -->
-  <!-- ========================= -->
+  <!-- ACTIVE CELLS -->
+  <rect x="-49"
+        y="-15"
+        width="24"
+        height="20"
+        rx="3"
+        fill="#299EFF">
 
-  <g transform="translate(275 70)">
+    <animate attributeName="opacity"
+             values=".15;.55;.15"
+             dur="2s"
+             repeatCount="indefinite"/>
 
-    <text fill="#63C8FF"
-          font-family="Arial"
-          font-size="12"
-          font-weight="700"
-          letter-spacing="3">
+  </rect>
 
-      CUSTOMER EXPERIENCE • ANALYTICS
-
-    </text>
-
-
-    <rect y="22"
-          width="78"
-          height="4"
-          rx="2"
-          fill="#299EFF"/>
-
-
-    <text y="92"
-          fill="url(#title)"
-          font-family="Arial"
-          font-size="49"
-          font-weight="800">
-
-      CUSTOMER
-
-    </text>
+  <rect x="25"
+        y="-15"
+        width="24"
+        height="20"
+        rx="3"
+        fill="#63C8FF"
+        opacity=".25"/>
 
 
-    <text y="147"
-          fill="#FFFFFF"
-          font-family="Arial"
-          font-size="49"
-          font-weight="800">
+  <!-- EXCEL CORE -->
+  <circle r="23"
+          fill="#0B2942"
+          stroke="#63C8FF"
+          stroke-opacity=".50"/>
 
-      SUPPORT
+  <text x="0"
+        y="8"
+        text-anchor="middle"
+        fill="#FFFFFF"
+        font-family="Arial"
+        font-size="25"
+        font-weight="800">
+    X
+  </text>
 
-    </text>
 
-
-    <text y="197"
+  <!-- FLOATING DATA NODE -->
+  <circle cx="0"
+          cy="-91"
+          r="4"
           fill="#63C8FF"
-          font-family="Arial"
-          font-size="36"
-          font-weight="800">
+          filter="url(#blueGlow)">
 
-      QUALITY ANALYSIS
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0"
+      to="360"
+      dur="7s"
+      repeatCount="indefinite"/>
 
-    </text>
+  </circle>
 
-
-    <rect y="220"
-          width="395"
-          height="2"
-          fill="#299EFF"
-          opacity=".45"/>
-
-
-    <text y="250"
-          fill="#718BA2"
-          font-family="Arial"
-          font-size="10.5"
-          letter-spacing="1.5">
-
-      SERVICE SIGNALS • CUSTOMER VOICE • QUALITY INSIGHTS
-
-    </text>
+</g>
 
 
-    <circle cx="5"
-            cy="282"
-            r="5"
+<!-- ===================================================== -->
+<!-- CENTER ZONE -->
+<!-- x = 275 → 745 -->
+<!-- ===================================================== -->
+
+<g transform="translate(275 55)">
+
+  <!-- SMALL LABEL -->
+  <text x="0"
+        y="0"
+        fill="#63C8FF"
+        font-family="Arial"
+        font-size="11"
+        font-weight="700"
+        letter-spacing="2.5">
+    DATA ANALYSIS • EXCEL WORKFLOW
+  </text>
+
+
+  <!-- ACCENT -->
+  <rect x="0"
+        y="18"
+        width="65"
+        height="3"
+        rx="2"
+        fill="#299EFF"/>
+
+
+  <!-- TITLE -->
+  <text x="0"
+        y="66"
+        fill="url(#titleGrad)"
+        font-family="Arial"
+        font-size="43"
+        font-weight="800">
+    TASK 1 : EXCEL
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- CENTER MINI ANALYSIS CARD -->
+  <!-- ================================================= -->
+
+  <g transform="translate(0 88)">
+
+    <!-- CARD -->
+    <rect x="0"
+          y="0"
+          width="455"
+          height="255"
+          rx="20"
+          fill="#071827"
+          stroke="#299EFF"
+          stroke-opacity=".28"/>
+
+
+    <!-- CARD HEADER -->
+    <rect x="0"
+          y="0"
+          width="455"
+          height="40"
+          rx="20"
+          fill="#0B243A"/>
+
+
+    <circle cx="20"
+            cy="20"
+            r="4"
             fill="#299EFF">
-
-      <animate attributeName="r"
-               values="4;7;4"
-               dur="2s"
-               repeatCount="indefinite"/>
-
-    </circle>
-
-
-    <text x="18"
-          y="286"
-          fill="#8DA4B8"
-          font-family="Arial"
-          font-size="10"
-          letter-spacing="1">
-
-      LIVE CUSTOMER SIGNAL
-
-    </text>
-
-  </g>
-
-
-  <!-- ========================= -->
-  <!-- RIGHT KPI PANEL -->
-  <!-- ========================= -->
-
-  <g transform="translate(775 35)">
-
-    <rect x="4"
-          y="8"
-          width="375"
-          height="390"
-          rx="28"
-          fill="#000000"
-          opacity=".35"/>
-
-
-    <rect width="375"
-          height="390"
-          rx="28"
-          fill="url(#glass)"
-          stroke="#58BFFF"
-          stroke-opacity=".22"/>
-
-
-    <circle cx="28"
-            cy="32"
-            r="5"
-            fill="#299EFF"
-            filter="url(#glow)">
 
       <animate attributeName="opacity"
                values="1;.25;1"
-               dur="1.8s"
+               dur="1.5s"
                repeatCount="indefinite"/>
 
     </circle>
 
 
-    <text x="43"
-          y="37"
+    <text x="34"
+          y="25"
           fill="#FFFFFF"
           font-family="Arial"
-          font-size="12"
-          font-weight="700"
-          letter-spacing="2">
-
-      QUALITY CONTROL
-
+          font-size="10"
+          font-weight="800"
+          letter-spacing="1.2">
+      EXCEL ANALYSIS
     </text>
 
 
-    <text x="345"
-          y="36"
+    <text x="425"
+          y="25"
           text-anchor="end"
-          fill="#5E7890"
+          fill="#527993"
           font-family="Arial"
-          font-size="9"
-          letter-spacing="1">
-
-      LIVE
-
+          font-size="7">
+      LIVE DATA
     </text>
 
 
-    <rect x="25"
-          y="57"
-          width="325"
-          height="1"
-          fill="#FFFFFF"
-          opacity=".07"/>
+    <!-- ================================================= -->
+    <!-- MINI TABLE -->
+    <!-- ================================================= -->
 
+    <g transform="translate(18 58)">
 
-    <!-- QUALITY -->
-
-    <g transform="translate(90 145)">
-
-      <circle r="62"
-              fill="none"
-              stroke="#17354F"
-              stroke-width="9"/>
-
-
-      <circle r="62"
-              fill="none"
-              stroke="#299EFF"
-              stroke-width="9"
-              stroke-linecap="round"
-              stroke-dasharray="337 390"
-              transform="rotate(-90)"
-              filter="url(#glow)"/>
-
-
-      <text y="-3"
-            text-anchor="middle"
-            fill="#FFFFFF"
-            font-family="Arial"
-            font-size="26"
-            font-weight="800">
-
-        92%
-
-      </text>
-
-
-      <text y="17"
-            text-anchor="middle"
-            fill="#7892A7"
-            font-family="Arial"
-            font-size="9"
-            letter-spacing="1.5">
-
-        QUALITY
-
-      </text>
-
-    </g>
-
-
-    <!-- CSAT -->
-
-    <g transform="translate(168 82)">
-
-      <rect width="165"
-            height="60"
-            rx="14"
-            fill="#0B2339"
-            stroke="#63C8FF"
-            stroke-opacity=".14"/>
-
-
-      <text x="15"
-            y="21"
-            fill="#718BA1"
-            font-family="Arial"
-            font-size="9"
-            letter-spacing="1.5">
-
-        CSAT SCORE
-
-      </text>
-
-
-      <text x="15"
-            y="45"
-            fill="#FFFFFF"
-            font-family="Arial"
-            font-size="20"
-            font-weight="800">
-
-        4.7/5
-
-      </text>
-
-    </g>
-
-
-    <!-- RESPONSE -->
-
-    <g transform="translate(168 152)">
-
-      <rect width="165"
-            height="60"
-            rx="14"
-            fill="#0B2339"
-            stroke="#63C8FF"
-            stroke-opacity=".14"/>
-
-
-      <text x="15"
-            y="21"
-            fill="#718BA1"
-            font-family="Arial"
-            font-size="9"
-            letter-spacing="1.5">
-
-        RESPONSE TIME
-
-      </text>
-
-
-      <text x="15"
-            y="45"
-            fill="#FFFFFF"
-            font-family="Arial"
-            font-size="20"
-            font-weight="800">
-
-        2.4m
-
-      </text>
-
-
-      <path d="M123 43
-               L133 33
-               L140 39
-               L151 26"
-            fill="none"
-            stroke="#299EFF"
-            stroke-width="2"
-            stroke-linecap="round"/>
-
-    </g>
-
-
-    <!-- SIGNAL -->
-
-    <text x="25"
-          y="245"
-          fill="#70879B"
-          font-family="Arial"
-          font-size="9"
-          letter-spacing="1.8">
-
-      CUSTOMER SIGNAL
-
-    </text>
-
-
-    <path d="M25 280
-             C33 280 33 267 41 267
-             S49 290 57 290
-             S65 260 73 260
-             S81 283 89 283
-             S97 269 105 269
-             S113 289 121 289
-             S129 264 137 264
-             S145 280 153 280"
-          fill="none"
-          stroke="#299EFF"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          filter="url(#glow)"/>
-
-
-    <!-- chat -->
-
-    <g transform="translate(180 255)">
-
-      <rect width="150"
-            height="55"
-            rx="14"
-            fill="#0C2941"
+      <rect width="190"
+            height="150"
+            rx="12"
+            fill="#06131F"
             stroke="#299EFF"
             stroke-opacity=".22"/>
 
 
-      <circle cx="18"
-              cy="19"
-              r="6"
-              fill="#299EFF"/>
+      <!-- TABLE GRID -->
+      <g stroke="#63C8FF"
+         stroke-opacity=".10">
+
+        <path d="M38 0V150"/>
+        <path d="M80 0V150"/>
+        <path d="M123 0V150"/>
+        <path d="M160 0V150"/>
+
+        <path d="M0 28H190"/>
+        <path d="M0 58H190"/>
+        <path d="M0 88H190"/>
+        <path d="M0 118H190"/>
+
+      </g>
 
 
-      <rect x="33"
-            y="13"
-            width="74"
-            height="5"
-            rx="2"
-            fill="#FFFFFF"
-            opacity=".72"/>
+      <!-- TABLE HEADER -->
+      <rect width="190"
+            height="28"
+            rx="12"
+            fill="#0D304B"/>
 
 
-      <rect x="33"
-            y="26"
-            width="50"
-            height="5"
-            rx="2"
+      <text x="17"
+            y="19"
             fill="#63C8FF"
-            opacity=".3"/>
+            font-family="Arial"
+            font-size="7"
+            font-weight="700">
+        ID
+      </text>
+
+      <text x="50"
+            y="19"
+            fill="#63C8FF"
+            font-family="Arial"
+            font-size="7"
+            font-weight="700">
+        TEAM
+      </text>
+
+      <text x="91"
+            y="19"
+            fill="#63C8FF"
+            font-family="Arial"
+            font-size="7"
+            font-weight="700">
+        HOURS
+      </text>
+
+      <text x="137"
+            y="19"
+            fill="#63C8FF"
+            font-family="Arial"
+            font-size="7"
+            font-weight="700">
+        FLAG
+      </text>
+
+
+      <!-- DATA -->
+      <g fill="#7897AB"
+         font-family="Arial"
+         font-size="7">
+
+        <text x="14" y="47">101</text>
+        <text x="50" y="47">A01</text>
+        <text x="91" y="47">18.4</text>
+        <text x="139" y="47">0</text>
+
+        <text x="14" y="77">102</text>
+        <text x="50" y="77">B02</text>
+        <text x="91" y="77">29.7</text>
+        <text x="139" y="77">1</text>
+
+        <text x="14" y="107">103</text>
+        <text x="50" y="107">C03</text>
+        <text x="91" y="107">14.2</text>
+        <text x="139" y="107">0</text>
+
+        <text x="14" y="137">104</text>
+        <text x="50" y="137">A01</text>
+        <text x="91" y="137">31.5</text>
+        <text x="139" y="137">1</text>
+
+      </g>
+
+
+      <!-- ACTIVE CELL -->
+      <rect x="128"
+            y="30"
+            width="28"
+            height="27"
+            rx="3"
+            fill="#299EFF">
+
+        <animate attributeName="opacity"
+                 values=".10;.50;.10"
+                 dur="2s"
+                 repeatCount="indefinite"/>
+
+      </rect>
 
     </g>
 
 
-    <rect x="25"
-          y="350"
-          width="325"
-          height="1"
-          fill="#FFFFFF"
-          opacity=".07"/>
+    <!-- ================================================= -->
+    <!-- FORMULA + SUMMARY -->
+    <!-- ================================================= -->
+
+    <g transform="translate(225 58)">
+
+      <!-- FORMULA -->
+      <rect width="212"
+            height="52"
+            rx="12"
+            fill="#0A2134"
+            stroke="#299EFF"
+            stroke-opacity=".28"/>
 
 
-    <circle cx="31"
-            cy="373"
-            r="4"
-            fill="#299EFF"/>
+      <text x="14"
+            y="17"
+            fill="#5C8BA7"
+            font-family="Arial"
+            font-size="7">
+        DERIVED FIELD
+      </text>
 
 
-    <text x="43"
-          y="377"
-          fill="#71899E"
-          font-family="Arial"
-          font-size="9"
-          letter-spacing="1.2">
+      <text x="14"
+            y="35"
+            fill="#FFFFFF"
+            font-family="monospace"
+            font-size="9">
+        =IF(Hours&gt;24,1,0)
+      </text>
 
-      CUSTOMER VOICE → SERVICE INSIGHT
 
-    </text>
+      <!-- MOVING DATA -->
+      <circle cx="10"
+              cy="26"
+              r="2.5"
+              fill="#63C8FF"
+              filter="url(#blueGlow)">
+
+        <animate attributeName="cx"
+                 values="10;202;10"
+                 dur="3.5s"
+                 repeatCount="indefinite"/>
+
+      </circle>
+
+
+      <!-- CONNECTOR -->
+      <path d="M106 52V65"
+            stroke="#299EFF"
+            stroke-width="1.5"
+            stroke-dasharray="4 5">
+
+        <animate attributeName="stroke-dashoffset"
+                 from="0"
+                 to="-18"
+                 dur="1s"
+                 repeatCount="indefinite"/>
+
+      </path>
+
+
+      <!-- SUMMARY -->
+      <rect y="65"
+            width="212"
+            height="133"
+            rx="12"
+            fill="#091C2D"
+            stroke="#299EFF"
+            stroke-opacity=".20"/>
+
+
+      <text x="15"
+            y="84"
+            fill="#FFFFFF"
+            font-family="Arial"
+            font-size="8"
+            font-weight="700">
+        SUMMARY
+      </text>
+
+
+      <!-- CHART -->
+      <g transform="translate(17 91)">
+
+        <!-- BASE -->
+        <path d="M0 82H175"
+              stroke="#31566D"
+              stroke-width="1"/>
+
+
+        <!-- BAR 1 -->
+        <rect x="10"
+              y="55"
+              width="22"
+              height="27"
+              rx="3"
+              fill="#299EFF">
+
+          <animate attributeName="height"
+                   values="27;45;27"
+                   dur="2.2s"
+                   repeatCount="indefinite"/>
+
+          <animate attributeName="y"
+                   values="55;37;55"
+                   dur="2.2s"
+                   repeatCount="indefinite"/>
+
+        </rect>
+
+
+        <!-- BAR 2 -->
+        <rect x="50"
+              y="40"
+              width="22"
+              height="42"
+              rx="3"
+              fill="#4AB5FF">
+
+          <animate attributeName="height"
+                   values="42;28;42"
+                   dur="2.5s"
+                   repeatCount="indefinite"/>
+
+          <animate attributeName="y"
+                   values="40;54;40"
+                   dur="2.5s"
+                   repeatCount="indefinite"/>
+
+        </rect>
+
+
+        <!-- BAR 3 -->
+        <rect x="90"
+              y="28"
+              width="22"
+              height="54"
+              rx="3"
+              fill="#63C8FF">
+
+          <animate attributeName="height"
+                   values="54;38;54"
+                   dur="2.7s"
+                   repeatCount="indefinite"/>
+
+          <animate attributeName="y"
+                   values="28;44;28"
+                   dur="2.7s"
+                   repeatCount="indefinite"/>
+
+        </rect>
+
+
+        <!-- BAR 4 -->
+        <rect x="130"
+              y="47"
+              width="22"
+              height="35"
+              rx="3"
+              fill="#299EFF">
+
+          <animate attributeName="height"
+                   values="35;50;35"
+                   dur="2.4s"
+                   repeatCount="indefinite"/>
+
+          <animate attributeName="y"
+                   values="47;32;47"
+                   dur="2.4s"
+                   repeatCount="indefinite"/>
+
+        </rect>
+
+
+        <!-- TREND LINE -->
+        <path d="M21 48
+                 L61 32
+                 L101 20
+                 L141 38"
+              fill="none"
+              stroke="#FFFFFF"
+              stroke-width="1.5"
+              stroke-dasharray="4 4">
+
+          <animate attributeName="stroke-dashoffset"
+                   from="0"
+                   to="-16"
+                   dur="1.2s"
+                   repeatCount="indefinite"/>
+
+        </path>
+
+      </g>
+
+    </g>
 
   </g>
 
-
-  <!-- ========================= -->
-  <!-- BOTTOM SIGNAL -->
-  <!-- ========================= -->
-
-  <g transform="translate(275 405)">
-
-    <rect width="440"
-          height="1"
-          fill="#63C8FF"
-          opacity=".22"/>
+</g>
 
 
-    <circle r="4"
-            fill="#299EFF"
-            filter="url(#glow)">
+<!-- ===================================================== -->
+<!-- RIGHT ZONE : EXCEL PIPELINE -->
+<!-- x = 790 → 1140 -->
+<!-- ===================================================== -->
 
-      <animate attributeName="cx"
-               values="0;440;0"
-               dur="7s"
-               repeatCount="indefinite"/>
+<g transform="translate(790 42)">
 
-    </circle>
-
-
-    <text y="25"
-          fill="#647E95"
-          font-family="Arial"
-          font-size="9"
-          letter-spacing="1.7">
-
-      SERVICE • SATISFACTION • RESPONSE • RESOLUTION
-
-    </text>
-
-  </g>
+  <!-- SHADOW -->
+  <rect x="7"
+        y="9"
+        width="350"
+        height="350"
+        rx="25"
+        fill="#000000"
+        opacity=".42"/>
 
 
-  <!-- ================================================= -->
-  <!-- EXAMINER CAUTION — EXACT TEXT -->
-  <!-- ================================================= -->
-
-  <g transform="translate(45 452)">
-
-    <rect width="1110"
-          height="38"
-          rx="12"
-          fill="#061523"
-          stroke="#299EFF"
-          stroke-opacity=".45"/>
+  <!-- PANEL -->
+  <rect width="350"
+        height="350"
+        rx="25"
+        fill="url(#panelGrad)"
+        stroke="#299EFF"
+        stroke-opacity=".32"/>
 
 
-    <!-- Animated left accent -->
-
-    <rect width="5"
-          height="38"
-          rx="2"
-          fill="#299EFF">
-
-      <animate attributeName="opacity"
-               values="1;.35;1"
-               dur="2s"
-               repeatCount="indefinite"/>
-
-    </rect>
+  <!-- INNER BORDER -->
+  <rect x="1"
+        y="1"
+        width="348"
+        height="348"
+        rx="24"
+        fill="none"
+        stroke="#63C8FF"
+        stroke-opacity=".07"/>
 
 
-    <!-- Warning icon -->
-
-    <path d="M25 28
-             L34 11
-             Q35 9 37 11
-             L46 28
-             Q47 30 44 30
-             H27
-             Q24 30 25 28Z"
+  <!-- HEADER DOT -->
+  <circle cx="22"
+          cy="31"
+          r="5"
           fill="#299EFF"
-          fill-opacity=".18"
-          stroke="#63C8FF"/>
+          filter="url(#blueGlow)">
+
+    <animate attributeName="opacity"
+             values="1;.25;1"
+             dur="1.7s"
+             repeatCount="indefinite"/>
+
+  </circle>
 
 
-    <text x="35"
-          y="25"
+  <!-- HEADER -->
+  <text x="35"
+        y="35"
+        fill="#FFFFFF"
+        font-family="Arial"
+        font-size="12"
+        font-weight="800"
+        letter-spacing="1.5">
+    EXCEL PIPELINE
+  </text>
+
+
+  <text x="320"
+        y="35"
+        text-anchor="end"
+        fill="#4E7897"
+        font-family="Arial"
+        font-size="7"
+        letter-spacing="1">
+    01 → 03
+  </text>
+
+
+  <!-- DIVIDER -->
+  <rect x="20"
+        y="54"
+        width="310"
+        height="1"
+        fill="#63C8FF"
+        opacity=".10"/>
+
+
+  <!-- ================================================= -->
+  <!-- STEP 01 -->
+  <!-- ================================================= -->
+
+  <g transform="translate(20 70)">
+
+    <rect width="310"
+          height="54"
+          rx="13"
+          fill="#071C30"
+          stroke="#299EFF"
+          stroke-opacity=".24"/>
+
+
+    <circle cx="26"
+            cy="27"
+            r="17"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".75"/>
+
+
+    <text x="26"
+          y="31"
           text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="10"
+          font-weight="800">
+      01
+    </text>
+
+
+    <text x="49"
+          y="22"
           fill="#FFFFFF"
           font-family="Arial"
           font-size="10"
           font-weight="800">
-
-      !
-
+      DATA IMPORT
     </text>
 
 
-    <!-- Caution heading -->
-
-    <text x="58"
-          y="16"
-          fill="#63C8FF"
+    <text x="49"
+          y="37"
+          fill="#6489A2"
           font-family="Arial"
-          font-size="8"
-          font-weight="800"
-          letter-spacing="1.2">
-
-      EXAMINER CAUTION
-
+          font-size="7">
+      Raw • Lookup • Clean
     </text>
 
 
-    <!-- EXACT USER CAUTION -->
-
-    <text x="58"
-          y="29"
-          fill="#D0DDE8"
-          font-family="Arial"
-          font-size="8.5">
-
-      Keep all formulas and the PivotTable editable. Screenshots alone do not satisfy E3. The examiner must be able to open the .xlsx and see live formulas.
-
-    </text>
-
-
-    <!-- Animated status dot -->
-
-    <circle cx="1085"
-            cy="19"
+    <circle cx="287"
+            cy="27"
             r="4"
-            fill="#299EFF"
-            filter="url(#glow)">
+            fill="#299EFF">
 
       <animate attributeName="opacity"
-               values="1;.2;1"
+               values="1;.25;1"
+               dur="1.5s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+  </g>
+
+
+  <!-- CONNECTOR -->
+  <path d="M175 124V140"
+        fill="none"
+        stroke="#299EFF"
+        stroke-width="1.5"
+        stroke-dasharray="4 5">
+
+    <animate attributeName="stroke-dashoffset"
+             from="0"
+             to="-18"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </path>
+
+
+  <!-- ================================================= -->
+  <!-- STEP 02 -->
+  <!-- ================================================= -->
+
+  <g transform="translate(20 140)">
+
+    <rect width="310"
+          height="54"
+          rx="13"
+          fill="#071C30"
+          stroke="#299EFF"
+          stroke-opacity=".24"/>
+
+
+    <circle cx="26"
+            cy="27"
+            r="17"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".75"/>
+
+
+    <text x="26"
+          y="31"
+          text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="10"
+          font-weight="800">
+      02
+    </text>
+
+
+    <text x="49"
+          y="22"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="10"
+          font-weight="800">
+      DERIVED FIELD
+    </text>
+
+
+    <text x="49"
+          y="37"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Breach Flag • COUNTIFS
+    </text>
+
+
+    <circle cx="287"
+            cy="27"
+            r="4"
+            fill="#299EFF">
+
+      <animate attributeName="opacity"
+               values=".25;1;.25"
                dur="1.8s"
                repeatCount="indefinite"/>
 
@@ -765,23 +875,216 @@
   </g>
 
 
-  <!-- CORNER ACCENTS -->
-
-  <path d="M0 452
-           V475
-           Q0 500 25 500
-           H58"
+  <!-- CONNECTOR -->
+  <path d="M175 194V210"
         fill="none"
         stroke="#299EFF"
-        stroke-width="3"/>
+        stroke-width="1.5"
+        stroke-dasharray="4 5">
+
+    <animate attributeName="stroke-dashoffset"
+             from="0"
+             to="-18"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </path>
 
 
-  <path d="M1200 48
-           V25
-           Q1200 0 1175 0
-           H1142"
-        fill="none"
-        stroke="#63C8FF"
-        stroke-width="3"/>
+  <!-- ================================================= -->
+  <!-- STEP 03 -->
+  <!-- ================================================= -->
+
+  <g transform="translate(20 210)">
+
+    <rect width="310"
+          height="54"
+          rx="13"
+          fill="#071C30"
+          stroke="#299EFF"
+          stroke-opacity=".24"/>
+
+
+    <circle cx="26"
+            cy="27"
+            r="17"
+            fill="#092B47"
+            stroke="#299EFF"
+            stroke-opacity=".75"/>
+
+
+    <text x="26"
+          y="31"
+          text-anchor="middle"
+          fill="#63C8FF"
+          font-family="Arial"
+          font-size="10"
+          font-weight="800">
+      03
+    </text>
+
+
+    <text x="49"
+          y="22"
+          fill="#FFFFFF"
+          font-family="Arial"
+          font-size="10"
+          font-weight="800">
+      PIVOTTABLE &amp; CHART
+    </text>
+
+
+    <text x="49"
+          y="37"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Department • Month • Average
+    </text>
+
+
+    <circle cx="287"
+            cy="27"
+            r="4"
+            fill="#299EFF">
+
+      <animate attributeName="opacity"
+               values="1;.25;1"
+               dur="1.6s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+  </g>
+
+
+  <!-- FOOT TEXT -->
+  <text x="20"
+        y="287"
+        fill="#4E7897"
+        font-family="Arial"
+        font-size="7"
+        letter-spacing="1">
+    IMPORT → CLEAN → CALCULATE → SUMMARIZE
+  </text>
+
+
+  <!-- PROGRESS -->
+  <rect x="20"
+        y="307"
+        width="310"
+        height="2"
+        rx="1"
+        fill="#12354D"/>
+
+
+  <rect x="20"
+        y="307"
+        width="65"
+        height="2"
+        rx="1"
+        fill="#299EFF">
+
+    <animate attributeName="x"
+             values="20;265;20"
+             dur="4s"
+             repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- LIVE DOT -->
+  <circle cx="320"
+          cy="325"
+          r="3"
+          fill="#63C8FF"
+          filter="url(#blueGlow)">
+
+    <animate attributeName="opacity"
+             values="1;.2;1"
+             dur="1.4s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+</g>
+
+
+<!-- ===================================================== -->
+<!-- BOTTOM FOOTER -->
+<!-- ===================================================== -->
+
+<g transform="translate(45 450)">
+
+  <rect width="1110"
+        height="40"
+        rx="12"
+        fill="#061523"
+        stroke="#299EFF"
+        stroke-opacity=".35"/>
+
+
+  <rect width="4"
+        height="40"
+        rx="2"
+        fill="#299EFF"/>
+
+
+  <text x="22"
+        y="16"
+        fill="#63C8FF"
+        font-family="Arial"
+        font-size="8"
+        font-weight="800"
+        letter-spacing="1.2">
+    EXCEL TASK 1
+  </text>
+
+
+  <text x="22"
+        y="30"
+        fill="#AFC5D4"
+        font-family="Arial"
+        font-size="8">
+    Data Import &amp; Cleaning • Derived Field &amp; Channel Summary • PivotTable &amp; Chart
+  </text>
+
+
+  <circle cx="1080"
+          cy="20"
+          r="4"
+          fill="#299EFF"
+          filter="url(#blueGlow)">
+
+    <animate attributeName="opacity"
+             values="1;.2;1"
+             dur="1.8s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+</g>
+
+
+<!-- ===================================================== -->
+<!-- CORNER ACCENTS -->
+<!-- ===================================================== -->
+
+<path d="M0 455
+         V475
+         Q0 500 25 500
+         H55"
+      fill="none"
+      stroke="#299EFF"
+      stroke-width="3"/>
+
+
+<path d="M1200 45
+         V25
+         Q1200 0 1175 0
+         H1145"
+      fill="none"
+      stroke="#63C8FF"
+      stroke-width="3"/>
 
 </svg>
