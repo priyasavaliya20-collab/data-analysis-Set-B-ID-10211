@@ -33,16 +33,19 @@
 
 ## 🎯 Objective
 
-Analyse customer-support ticket data across **4 teams** and **2 departments** (Jan–Mar) to find out:
+💡 Question 1: Which department is slowest to resolve tickets and breaches the 24-hour SLA most often?
 
-- ⏱️ Which departments and teams take the longest to resolve tickets
-- 🚨 Which teams and channels breach the **24-hour SLA** most often
-- 😊 How resolution speed relates to customer satisfaction
-- ✅ Whether SQL, Python, Excel and Power BI all tell the same story
+Answer: The Technical department. Its average resolution time is 28.33 hours, against 19.33 hours for Service. Its SLA breach rate is 50.00% (3 of 6 tickets), against 33.33% (2 of 6) for Service.
 
-> **SLA rule:** a ticket is a **breach** when `resolution_hours > 24` (exactly 24 hours is *not* a breach).
+Source: S2a_avg_resolution_by_department.csv and python_summary.csv.
 
-<!-- 📸 Add your objective / banner image here -->
+---
+
+💡 Question 2: Which channel generates the most SLA breaches?
+
+Answer: Chat, with 3 breaches out of the 5 total. Phone has 2 and Email has 0.
+
+Source: S2c_top_two_channels_by_breach.csv, and the Excel Summary sheet for Email's 0.
 
 ---
 
