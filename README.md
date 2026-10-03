@@ -60,20 +60,14 @@ data-analysis-set-B_10211/
 
 ## ♻️ Workflow
 
-```mermaid
-flowchart LR
-    A[Raw CSVs<br/>tickets + teams] --> B[Clean<br/>remove duplicate ticket 12]
-    B --> C[Merge<br/>tickets ⟶ teams]
-    C --> D[breach_flag<br/>hours > 24]
-    D --> E[SQL]
-    D --> F[Python]
-    D --> G[Excel]
-    D --> H[Power BI]
-    E --> I[Reconciled Insights]
-    F --> I
-    G --> I
-    H --> I
-```
+
+
+
+<img width="1280" height="420" alt="pic" src="https://github.com/user-attachments/assets/9e6ab962-71b1-41d5-b941-a34596b02ed2" />
+
+
+
+
 
 ---
 
