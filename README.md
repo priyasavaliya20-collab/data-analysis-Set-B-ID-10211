@@ -1,6 +1,4 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1F3A,100:14B8A6&height=220&section=header&text=Support%20Ticket%20SLA%20Analysis&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=SQL%20%7C%20Python%20%7C%20Excel%20%7C%20Power%20BI&descAlignY=60&descSize=18" width="100%"/>
+<img width="1200" height="500" alt="pic" src="https://github.com/user-attachments/assets/c6c14bd2-1d3b-4a53-92e3-638b653e0788" />
 
 ![Status](https://img.shields.io/badge/Status-Completed-14B8A6?style=for-the-badge)
 ![Set](https://img.shields.io/badge/Assigned%20Set-B-0B1F3A?style=for-the-badge)
