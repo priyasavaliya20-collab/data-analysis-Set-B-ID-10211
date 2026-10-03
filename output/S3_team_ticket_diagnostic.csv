@@ -1,0 +1,5 @@
+team_id,team,department,matched_ticket_count,unmatched_team_flag
+T1,AccountCare,Service,3,0
+T2,BillingHelp,Service,3,0
+T3,AppSupport,Technical,3,0
+T4,DeviceHelp,Technical,3,0

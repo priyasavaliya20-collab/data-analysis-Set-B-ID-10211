@@ -1,0 +1,3 @@
+department,total_tickets,breached_count,sla_breach_rate_percent
+Service,6,2,33.33333333333333
+Technical,6,3,50.0
