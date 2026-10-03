@@ -173,20 +173,20 @@ psql -U <user> -d <db> -f sql/queries.sql
 ```
 
 ```sql
--- S2a: Average resolution time by department
+
 SELECT tm.department, ROUND(AVG(t.resolution_hours), 2) AS avg_resolution_hours
 FROM tickets AS t JOIN teams AS tm ON t.team_id = tm.team_id
 GROUP BY tm.department
 ORDER BY avg_resolution_hours DESC;
 
--- S2b: Teams breaching SLA (average > 24 hours)
+
 SELECT tm.team, ROUND(AVG(t.resolution_hours), 2) AS avg_resolution_hours
 FROM tickets AS t JOIN teams AS tm ON t.team_id = tm.team_id
 GROUP BY tm.team_id, tm.team
 HAVING AVG(t.resolution_hours) > 24
 ORDER BY avg_resolution_hours DESC;
 
--- S2c: Top two channels by breach count (ties broken alphabetically)
+
 SELECT t.channel, COUNT(*) AS breach_count
 FROM tickets AS t
 WHERE t.resolution_hours > 24
@@ -194,7 +194,7 @@ GROUP BY t.channel
 ORDER BY breach_count DESC, t.channel ASC
 LIMIT 2;
 
--- S3: Integrity check — every team has matching tickets
+
 SELECT tm.team_id, tm.team, tm.department,
        COUNT(t.ticket_id) AS matched_ticket_count,
        CASE WHEN COUNT(t.ticket_id) = 0 THEN 1 ELSE 0 END AS unmatched_team_flag
