@@ -251,6 +251,11 @@ department_summary["sla_breach_rate_percent"] = (
 | Line / area chart | Average resolution hours by Month |
 | Slicer | Channel |
 
+
+<img width="1162" height="656" alt="Screenshot 2026-10-03 131935" src="https://github.com/user-attachments/assets/7cce4ce1-59f6-47a1-b523-16873412c153" />
+
+
+
 ```
 Home → Transform Data → Data Source Settings
 → Change Source → point to new local CSV path
