@@ -3,13 +3,6 @@
 ---
 
 
-![Status](https://img.shields.io/badge/Status-Completed-14B8A6?style=for-the-badge)
-![Set](https://img.shields.io/badge/Assigned%20Set-B-0B1F3A?style=for-the-badge)
-![Tickets](https://img.shields.io/badge/Tickets%20Analysed-12-14B8A6?style=for-the-badge)
-![SLA](https://img.shields.io/badge/SLA%20Threshold-24%20hrs-E11D48?style=for-the-badge)
-
-</div>
-
 ---
 
 **Student:** Priya Savaliya — **Student ID:** 10211
