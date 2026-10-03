@@ -25,7 +25,7 @@
     <stop offset="100%" stop-color="#061522"/>
   </linearGradient>
 
-  <!-- SQL GLOW -->
+  <!-- GLOW -->
   <radialGradient id="glow">
     <stop offset="0%" stop-color="#168BFF" stop-opacity=".30"/>
     <stop offset="100%" stop-color="#168BFF" stop-opacity="0"/>
@@ -73,7 +73,7 @@
       rx="28"
       fill="url(#bg)"/>
 
-<circle cx="125"
+<circle cx="120"
         cy="210"
         r="300"
         fill="url(#glow)"/>
@@ -91,120 +91,155 @@
 
 
 <!-- ===================================================== -->
-<!-- LEFT : SQL DATABASE OBJECT -->
+<!-- LEFT PYTHON TERMINAL -->
 <!-- ===================================================== -->
 
-<g transform="translate(145 215)">
+<g transform="translate(55 125)">
 
-  <!-- OUTER ROTATING RING -->
-  <circle r="92"
-          fill="none"
-          stroke="#299EFF"
-          stroke-opacity=".18"
-          stroke-width="1"
-          stroke-dasharray="5 10">
-
-    <animateTransform
-      attributeName="transform"
-      type="rotate"
-      from="0"
-      to="360"
-      dur="18s"
-      repeatCount="indefinite"/>
-
-  </circle>
+  <!-- TERMINAL SHADOW -->
+  <rect x="6"
+        y="8"
+        width="205"
+        height="265"
+        rx="20"
+        fill="#000"
+        opacity=".35"/>
 
 
-  <!-- SECOND RING -->
-  <circle r="70"
-          fill="none"
-          stroke="#63C8FF"
-          stroke-opacity=".14"
-          stroke-dasharray="2 11">
-
-    <animateTransform
-      attributeName="transform"
-      type="rotate"
-      from="360"
-      to="0"
-      dur="12s"
-      repeatCount="indefinite"/>
-
-  </circle>
-
-
-  <!-- DATABASE CYLINDER -->
-  <ellipse cx="0"
-           cy="-48"
-           rx="48"
-           ry="15"
-           fill="#0C3554"
-           stroke="#63C8FF"
-           stroke-opacity=".55"/>
-
-  <path d="M-48 -48
-           V47
-           C-48 57 -27 63 0 63
-           C27 63 48 57 48 47
-           V-48"
-        fill="#071B2C"
+  <!-- TERMINAL -->
+  <rect width="205"
+        height="265"
+        rx="20"
+        fill="#061522"
         stroke="#299EFF"
-        stroke-opacity=".55"/>
+        stroke-opacity=".35"/>
 
 
-  <!-- DATABASE LAYERS -->
-  <ellipse cx="0"
-           cy="-17"
-           rx="48"
-           ry="14"
-           fill="none"
-           stroke="#299EFF"
-           stroke-opacity=".35"/>
-
-  <ellipse cx="0"
-           cy="15"
-           rx="48"
-           ry="14"
-           fill="none"
-           stroke="#299EFF"
-           stroke-opacity=".30"/>
-
-  <ellipse cx="0"
-           cy="47"
-           rx="48"
-           ry="14"
-           fill="none"
-           stroke="#299EFF"
-           stroke-opacity=".25"/>
+  <!-- TERMINAL HEADER -->
+  <rect width="205"
+        height="38"
+        rx="20"
+        fill="#0B243A"/>
 
 
-  <!-- SQL TEXT -->
-  <text x="0"
-        y="7"
-        text-anchor="middle"
-        fill="#FFFFFF"
+  <circle cx="19"
+          cy="19"
+          r="4"
+          fill="#299EFF"/>
+
+  <circle cx="32"
+          cy="19"
+          r="4"
+          fill="#4AB5FF"
+          opacity=".7"/>
+
+  <circle cx="45"
+          cy="19"
+          r="4"
+          fill="#63C8FF"
+          opacity=".5"/>
+
+
+  <text x="64"
+        y="24"
+        fill="#D8F3FF"
         font-family="Arial"
-        font-size="19"
-        font-weight="800"
-        letter-spacing="2">
-    SQL
+        font-size="9"
+        font-weight="700">
+    PYTHON / DATAFRAME
   </text>
 
 
-  <!-- MOVING DATA NODE -->
-  <circle cx="0"
-          cy="-92"
-          r="4"
-          fill="#63C8FF"
+  <!-- CODE -->
+  <g font-family="monospace"
+     font-size="8">
+
+    <text x="18"
+          y="65"
+          fill="#63C8FF">
+      import pandas as pd
+    </text>
+
+    <text x="18"
+          y="84"
+          fill="#7BA5BE">
+      df = pd.read_csv(...)
+    </text>
+
+    <text x="18"
+          y="103"
+          fill="#299EFF">
+      df.drop_duplicates()
+    </text>
+
+    <text x="18"
+          y="122"
+          fill="#7BA5BE">
+      df.merge(lookup)
+    </text>
+
+    <text x="18"
+          y="141"
+          fill="#63C8FF">
+      df["flag"] = ...
+    </text>
+
+    <text x="18"
+          y="160"
+          fill="#7BA5BE">
+      df.groupby("department")
+    </text>
+
+  </g>
+
+
+  <!-- CURSOR -->
+  <rect x="18"
+        y="178"
+        width="6"
+        height="12"
+        fill="#63C8FF">
+
+    <animate attributeName="opacity"
+             values="1;0;1"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </rect>
+
+
+  <!-- MINI DATAFRAME -->
+  <rect x="18"
+        y="205"
+        width="169"
+        height="43"
+        rx="8"
+        fill="#091E30"
+        stroke="#299EFF"
+        stroke-opacity=".18"/>
+
+
+  <g stroke="#63C8FF"
+     stroke-opacity=".10">
+
+    <path d="M18 219H187"/>
+    <path d="M18 233H187"/>
+    <path d="M60 205V248"/>
+    <path d="M112 205V248"/>
+
+  </g>
+
+
+  <circle cx="177"
+          cy="226"
+          r="3"
+          fill="#299EFF"
           filter="url(#blueGlow)">
 
-    <animateTransform
-      attributeName="transform"
-      type="rotate"
-      from="0"
-      to="360"
-      dur="7s"
-      repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+             values="1;.2;1"
+             dur="1.6s"
+             repeatCount="indefinite"/>
 
   </circle>
 
@@ -215,7 +250,7 @@
 <!-- MAIN TITLE -->
 <!-- ===================================================== -->
 
-<g transform="translate(275 52)">
+<g transform="translate(285 48)">
 
   <text x="0"
         y="0"
@@ -224,7 +259,7 @@
         font-size="11"
         font-weight="700"
         letter-spacing="2.5">
-    DATA ANALYSIS • SQL WORKFLOW
+    DATA ANALYSIS • PYTHON WORKFLOW
   </text>
 
 
@@ -242,40 +277,36 @@
         font-family="Arial"
         font-size="43"
         font-weight="800">
-    TASK 2 : SQL
+    TASK 3 : PYTHON
   </text>
 
 </g>
 
 
 <!-- ===================================================== -->
-<!-- CENTER SQL QUERY VISUAL -->
+<!-- CENTER PYTHON DATA PIPELINE -->
 <!-- ===================================================== -->
 
-<g transform="translate(275 145)">
+<g transform="translate(285 135)">
 
-  <!-- MAIN TERMINAL -->
-  <rect x="0"
-        y="0"
-        width="455"
-        height="250"
-        rx="20"
+  <!-- MAIN CARD -->
+  <rect width="475"
+        height="275"
+        rx="22"
         fill="#071827"
         stroke="#299EFF"
-        stroke-opacity=".30"/>
+        stroke-opacity=".28"/>
 
 
-  <!-- TERMINAL HEADER -->
-  <rect x="0"
-        y="0"
-        width="455"
-        height="40"
-        rx="20"
+  <!-- HEADER -->
+  <rect width="475"
+        height="42"
+        rx="22"
         fill="#0B243A"/>
 
 
-  <circle cx="20"
-          cy="20"
+  <circle cx="21"
+          cy="21"
           r="4"
           fill="#299EFF">
 
@@ -287,96 +318,97 @@
   </circle>
 
 
-  <text x="34"
-        y="25"
+  <text x="35"
+        y="26"
         fill="#FFFFFF"
         font-family="Arial"
         font-size="10"
         font-weight="800"
         letter-spacing="1.2">
-    SQL QUERY ENGINE
+    PYTHON DATA PIPELINE
   </text>
 
 
-  <text x="425"
-        y="25"
+  <text x="448"
+        y="26"
         text-anchor="end"
         fill="#527993"
         font-family="Arial"
         font-size="7">
-    3 QUERIES
+    ETL → ANALYSIS → EXPORT
   </text>
 
 
   <!-- ================================================= -->
-  <!-- QUERY 01 -->
+  <!-- STEP 01 : LOAD & CLEAN -->
   <!-- ================================================= -->
 
-  <g transform="translate(18 56)">
+  <g transform="translate(18 58)">
 
-    <rect width="200"
-          height="72"
-          rx="12"
+    <rect width="205"
+          height="82"
+          rx="14"
           fill="#081E31"
           stroke="#299EFF"
           stroke-opacity=".22"/>
 
 
-    <circle cx="22"
-            cy="22"
-            r="13"
-            fill="#092E4B"
+    <circle cx="25"
+            cy="25"
+            r="16"
+            fill="#092B47"
             stroke="#299EFF"
-            stroke-opacity=".60"/>
+            stroke-opacity=".70"/>
 
-    <text x="22"
-          y="26"
+
+    <text x="25"
+          y="29"
           text-anchor="middle"
           fill="#63C8FF"
           font-family="Arial"
-          font-size="8"
+          font-size="9"
           font-weight="800">
       01
     </text>
 
 
-    <text x="44"
-          y="21"
+    <text x="49"
+          y="23"
           fill="#FFFFFF"
           font-family="Arial"
           font-size="9"
           font-weight="800">
-      TABLE SETUP
+      LOAD &amp; CLEAN
     </text>
 
 
-    <text x="44"
-          y="38"
+    <text x="49"
+          y="40"
           fill="#6489A2"
-          font-family="monospace"
+          font-family="Arial"
           font-size="7">
-      CREATE TABLE
+      CSV • Remove Duplicates
     </text>
 
 
-    <text x="44"
-          y="53"
+    <text x="49"
+          y="55"
           fill="#299EFF"
-          font-family="monospace"
+          font-family="Arial"
           font-size="7">
-      INSERT INTO
+      Missing / Type Cleanup
     </text>
 
 
-    <!-- status -->
-    <circle cx="180"
-            cy="57"
+    <!-- cleaning animation -->
+    <circle cx="177"
+            cy="65"
             r="3"
             fill="#63C8FF">
 
-      <animate attributeName="opacity"
-               values="1;.2;1"
-               dur="1.5s"
+      <animate attributeName="cx"
+               values="155;180;155"
+               dur="2s"
                repeatCount="indefinite"/>
 
     </circle>
@@ -385,73 +417,74 @@
 
 
   <!-- ================================================= -->
-  <!-- QUERY 02 -->
+  <!-- STEP 02 : MERGE & DERIVE -->
   <!-- ================================================= -->
 
-  <g transform="translate(237 56)">
+  <g transform="translate(252 58)">
 
-    <rect width="200"
-          height="72"
-          rx="12"
+    <rect width="205"
+          height="82"
+          rx="14"
           fill="#081E31"
           stroke="#299EFF"
           stroke-opacity=".22"/>
 
 
-    <circle cx="22"
-            cy="22"
-            r="13"
-            fill="#092E4B"
+    <circle cx="25"
+            cy="25"
+            r="16"
+            fill="#092B47"
             stroke="#299EFF"
-            stroke-opacity=".60"/>
+            stroke-opacity=".70"/>
 
-    <text x="22"
-          y="26"
+
+    <text x="25"
+          y="29"
           text-anchor="middle"
           fill="#63C8FF"
           font-family="Arial"
-          font-size="8"
+          font-size="9"
           font-weight="800">
       02
     </text>
 
 
-    <text x="44"
-          y="21"
+    <text x="49"
+          y="23"
           fill="#FFFFFF"
           font-family="Arial"
           font-size="9"
           font-weight="800">
-      ANALYTICAL QUERY
+      MERGE &amp; DERIVE
     </text>
 
 
-    <text x="44"
-          y="38"
+    <text x="49"
+          y="40"
           fill="#6489A2"
-          font-family="monospace"
+          font-family="Arial"
           font-size="7">
-      SELECT • JOIN
+      Merge Lookup Data
     </text>
 
 
-    <text x="44"
-          y="53"
+    <text x="49"
+          y="55"
           fill="#299EFF"
-          font-family="monospace"
+          font-family="Arial"
           font-size="7">
-      GROUP BY • ORDER BY
+      Derived Field
     </text>
 
 
-    <circle cx="180"
-            cy="57"
+    <circle cx="177"
+            cy="65"
             r="3"
             fill="#299EFF">
 
       <animate attributeName="opacity"
-               values=".25;1;.25"
-               dur="1.7s"
+               values=".2;1;.2"
+               dur="1.8s"
                repeatCount="indefinite"/>
 
     </circle>
@@ -459,94 +492,199 @@
   </g>
 
 
+  <!-- CONNECTOR -->
+  <path d="M223 99H252"
+        stroke="#299EFF"
+        stroke-width="1.5"
+        stroke-dasharray="4 5">
+
+    <animate attributeName="stroke-dashoffset"
+             from="0"
+             to="-18"
+             dur="1s"
+             repeatCount="indefinite"/>
+
+  </path>
+
+
   <!-- ================================================= -->
-  <!-- RESULT TABLE -->
+  <!-- BOTTOM ANALYSIS -->
   <!-- ================================================= -->
 
-  <g transform="translate(18 145)">
+  <g transform="translate(18 158)">
 
-    <rect width="419"
-          height="87"
-          rx="12"
+    <rect width="439"
+          height="98"
+          rx="15"
           fill="#06131F"
           stroke="#299EFF"
           stroke-opacity=".20"/>
 
 
-    <text x="15"
-          y="19"
+    <!-- LEFT ANALYSIS -->
+    <text x="18"
+          y="22"
           fill="#FFFFFF"
           font-family="Arial"
           font-size="8"
-          font-weight="700">
-      QUERY RESULT
+          font-weight="800">
+      DEPARTMENT ANALYSIS
     </text>
 
 
-    <text x="400"
-          y="19"
-          text-anchor="end"
-          fill="#4E7897"
-          font-family="Arial"
-          font-size="7">
-      DATA INTEGRITY ✓
-    </text>
+    <!-- BAR 1 -->
+    <rect x="18"
+          y="37"
+          width="90"
+          height="9"
+          rx="4"
+          fill="#123A57"/>
 
+    <rect x="18"
+          y="37"
+          width="62"
+          height="9"
+          rx="4"
+          fill="#299EFF">
 
-    <!-- TABLE -->
-    <g transform="translate(15 29)"
-       stroke="#63C8FF"
-       stroke-opacity=".10">
-
-      <path d="M0 18H389"/>
-      <path d="M0 36H389"/>
-
-      <path d="M75 0V58"/>
-      <path d="M160 0V58"/>
-      <path d="M255 0V58"/>
-
-    </g>
-
-
-    <g fill="#63C8FF"
-       font-family="Arial"
-       font-size="7"
-       font-weight="700">
-
-      <text x="25" y="42">ID</text>
-      <text x="100" y="42">DEPARTMENT</text>
-      <text x="190" y="42">MONTH</text>
-      <text x="280" y="42">RESULT</text>
-
-    </g>
-
-
-    <g fill="#7897AB"
-       font-family="Arial"
-       font-size="7">
-
-      <text x="25" y="60">101</text>
-      <text x="100" y="60">Support</text>
-      <text x="190" y="60">Jan</text>
-      <text x="280" y="60">PASS</text>
-
-    </g>
-
-
-    <!-- scanning line -->
-    <rect x="15"
-          y="30"
-          width="389"
-          height="1"
-          fill="#63C8FF"
-          opacity=".45">
-
-      <animate attributeName="y"
-               values="30;85;30"
-               dur="3s"
+      <animate attributeName="width"
+               values="62;82;62"
+               dur="2.5s"
                repeatCount="indefinite"/>
 
     </rect>
+
+
+    <text x="116"
+          y="45"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Support
+    </text>
+
+
+    <!-- BAR 2 -->
+    <rect x="18"
+          y="56"
+          width="90"
+          height="9"
+          rx="4"
+          fill="#123A57"/>
+
+    <rect x="18"
+          y="56"
+          width="75"
+          height="9"
+          rx="4"
+          fill="#4AB5FF">
+
+      <animate attributeName="width"
+               values="75;58;75"
+               dur="2.7s"
+               repeatCount="indefinite"/>
+
+    </rect>
+
+
+    <text x="116"
+          y="64"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Sales
+    </text>
+
+
+    <!-- BAR 3 -->
+    <rect x="18"
+          y="75"
+          width="90"
+          height="9"
+          rx="4"
+          fill="#123A57"/>
+
+    <rect x="18"
+          y="75"
+          width="48"
+          height="9"
+          rx="4"
+          fill="#63C8FF">
+
+      <animate attributeName="width"
+               values="48;72;48"
+               dur="2.3s"
+               repeatCount="indefinite"/>
+
+    </rect>
+
+
+    <text x="116"
+          y="83"
+          fill="#6489A2"
+          font-family="Arial"
+          font-size="7">
+      Operations
+    </text>
+
+
+    <!-- EXPORT CARDS -->
+    <g transform="translate(245 20)">
+
+      <rect width="175"
+            height="63"
+            rx="11"
+            fill="#0A2134"
+            stroke="#299EFF"
+            stroke-opacity=".20"/>
+
+
+      <text x="14"
+            y="18"
+            fill="#63C8FF"
+            font-family="Arial"
+            font-size="7"
+            font-weight="700">
+        OUTPUT FILES
+      </text>
+
+
+      <text x="14"
+            y="36"
+            fill="#FFFFFF"
+            font-family="monospace"
+            font-size="8">
+        analysis.csv
+      </text>
+
+
+      <text x="14"
+            y="51"
+            fill="#7897AB"
+            font-family="monospace"
+            font-size="8">
+        summary.xlsx
+      </text>
+
+
+      <!-- EXPORT ARROW -->
+      <path d="M145 29
+               L158 29
+               M153 24
+               L158 29
+               L153 34"
+            fill="none"
+            stroke="#63C8FF"
+            stroke-width="1.5">
+
+        <animate attributeName="opacity"
+                 values=".3;1;.3"
+                 dur="1.5s"
+                 repeatCount="indefinite"/>
+
+      </path>
+
+    </g>
 
   </g>
 
@@ -554,7 +692,7 @@
 
 
 <!-- ===================================================== -->
-<!-- RIGHT SQL PIPELINE -->
+<!-- RIGHT : PYTHON WORKFLOW -->
 <!-- ===================================================== -->
 
 <g transform="translate(790 42)">
@@ -611,7 +749,7 @@
         font-size="12"
         font-weight="800"
         letter-spacing="1.5">
-    SQL PIPELINE
+    PYTHON PIPELINE
   </text>
 
 
@@ -674,7 +812,7 @@
           font-family="Arial"
           font-size="10"
           font-weight="800">
-      TABLE DEFINITIONS
+      LOAD &amp; CLEAN
     </text>
 
 
@@ -683,7 +821,7 @@
           fill="#6489A2"
           font-family="Arial"
           font-size="7">
-      CREATE • INSERT • LOAD
+      Read • Clean • Prepare
     </text>
 
 
@@ -757,7 +895,7 @@
           font-family="Arial"
           font-size="10"
           font-weight="800">
-      ANALYTICAL QUERIES
+      DERIVED FIELD
     </text>
 
 
@@ -766,7 +904,7 @@
           fill="#6489A2"
           font-family="Arial"
           font-size="7">
-      SELECT • JOIN • GROUP BY
+      Merge • Transform • Analyze
     </text>
 
 
@@ -840,7 +978,7 @@
           font-family="Arial"
           font-size="10"
           font-weight="800">
-      OUTPUT &amp; INTEGRITY
+      CHART &amp; EXPORTS
     </text>
 
 
@@ -849,7 +987,7 @@
           fill="#6489A2"
           font-family="Arial"
           font-size="7">
-      Files • Validation • Checks
+      Visualize • Save • Export
     </text>
 
 
@@ -868,18 +1006,18 @@
   </g>
 
 
-  <!-- PIPELINE LABEL -->
+  <!-- FOOT LABEL -->
   <text x="20"
         y="287"
         fill="#4E7897"
         font-family="Arial"
         font-size="7"
         letter-spacing="1">
-    DEFINE → QUERY → VALIDATE → EXPORT
+    LOAD → CLEAN → MERGE → ANALYZE → EXPORT
   </text>
 
 
-  <!-- PROGRESS BAR -->
+  <!-- PROGRESS -->
   <rect x="20"
         y="307"
         width="310"
@@ -903,7 +1041,7 @@
   </rect>
 
 
-  <!-- LIVE STATUS -->
+  <!-- LIVE DOT -->
   <circle cx="320"
           cy="325"
           r="3"
@@ -921,7 +1059,7 @@
 
 
 <!-- ===================================================== -->
-<!-- BOTTOM FOOTER -->
+<!-- FOOTER -->
 <!-- ===================================================== -->
 
 <g transform="translate(45 450)">
@@ -947,7 +1085,7 @@
         font-size="8"
         font-weight="800"
         letter-spacing="1.2">
-    SQL TASK 2
+    PYTHON TASK 3
   </text>
 
 
@@ -956,7 +1094,7 @@
         fill="#AFC5D4"
         font-family="Arial"
         font-size="8">
-    Table Definitions &amp; Data Load • Three Analytical Queries • Output Files &amp; Data Integrity Check
+    Load, Clean &amp; Merge • Derived Field &amp; Department Analysis • Chart &amp; Exports
   </text>
 
 
